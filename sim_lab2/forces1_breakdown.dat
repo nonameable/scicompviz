@@ -1,0 +1,88 @@
+
+-------------------------------------------------------------------------
+|    ___ _   _ ___                                                      |
+|   / __| | | |_  )   Release 5.0.0  "Raven"                            |
+|   \__ \ |_| |/ /                                                      |
+|   |___/\___//___|   Suite (Computational Fluid Dynamics Code)         |
+|                                                                       |
+-------------------------------------------------------------------------
+| SU2 Lead Dev.: Dr. Francisco Palacios, Francisco.D.Palacios@boeing.com|
+|                Dr. Thomas D. Economon, economon@stanford.edu          |
+-------------------------------------------------------------------------
+| SU2 Developers:                                                       |
+| - Prof. Juan J. Alonso's group at Stanford University.                |
+| - Prof. Piero Colonna's group at Delft University of Technology.      |
+| - Prof. Nicolas R. Gauger's group at Kaiserslautern U. of Technology. |
+| - Prof. Alberto Guardone's group at Polytechnic University of Milan.  |
+| - Prof. Rafael Palacios' group at Imperial College London.            |
+| - Prof. Edwin van der Weide's group at the University of Twente.      |
+| - Prof. Vincent Terrapon's group at the University of Liege.          |
+-------------------------------------------------------------------------
+| Copyright (C) 2012-2017 SU2, the open-source CFD code.                |
+|                                                                       |
+| SU2 is free software; you can redistribute it and/or                  |
+| modify it under the terms of the GNU Lesser General Public            |
+| License as published by the Free Software Foundation; either          |
+| version 2.1 of the License, or (at your option) any later version.    |
+|                                                                       |
+| SU2 is distributed in the hope that it will be useful,                |
+| but WITHOUT ANY WARRANTY; without even the implied warranty of        |
+| MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU      |
+| Lesser General Public License for more details.                       |
+|                                                                       |
+| You should have received a copy of the GNU Lesser General Public      |
+| License along with SU2. If not, see <http://www.gnu.org/licenses/>.   |
+-------------------------------------------------------------------------
+
+
+Problem definition:
+
+Force coefficients computed using free-stream values.
+Viscous and Inviscid flow: rho_ref, and vel_ref
+are based on the free-stream values, p_ref = rho_ref*vel_ref^2.
+The free-stream value of the pressure is 0.
+Mach number: 0.0150621, computed using the Bulk modulus.
+Angle of attack (deg): 0, computed using the the free-stream velocity.
+Side slip angle (deg): 0, computed using the the free-stream velocity.
+Reynolds number: 347706, computed using free-stream values.
+Only dimensional computation, the grid should be dimensional.
+-- Input conditions:
+Bulk modulus: 142000 Pa.
+Artificial compressibility factor: 0.1 Pa.
+Free-stream static pressure: 0 Pa.
+Free-stream total pressure: 0 Pa.
+Free-stream density: 1.2886 kg/m^3.
+Free-stream velocity: (5, 0) m/s. Magnitude: 5 m/s.
+Free-stream viscosity: 1.853e-05 N.s/m^2.
+Free-stream turb. kinetic energy per unit mass: 0.09375 m^2/s^2.
+Free-stream specific dissipation: 651.95 1/s.
+-- Reference values:
+Reference pressure: 32.215 Pa.
+Reference density: 1.2886 kg/m^3.
+Reference velocity: 5 m/s.
+Reference length: 1 m.
+Reference viscosity: 6.443 N.s/m^2.
+-- Resulting non-dimensional state:
+Mach number (non-dim): 0.0150621
+Reynolds number (non-dim): 347706. Re length: 1 m.
+Free-stream pressure (non-dim): 0
+Free-stream density (non-dim): 1
+Free-stream velocity (non-dim): (1, 0). Magnitude: 1
+Free-stream viscosity (non-dim): 2.87599e-06
+Free-stream turb. kinetic energy (non-dim): 0.00375
+Free-stream specific dissipation (non-dim): 130.39
+
+
+Forces breakdown:
+
+NOTE: Multiply forces by the non-dimensional factor: 0.5, and the reference factor: 32.215
+to obtain the dimensional force.
+
+Total CL:              0 | Pressure (    0%):           0 | Friction (    0%):           0 | Momentum (    0%):           0
+Total CD:              0 | Pressure (    0%):           0 | Friction (    0%):           0 | Momentum (    0%):           0
+Total CL/CD:           0 | Pressure (    0%):           0 | Friction (    0%):           0 | Momentum (    0%):           0
+Total CMz:             0 | Pressure (    0%):           0 | Friction (    0%):           0 | Momentum (    0%):           0
+Total CFx:             0 | Pressure (    0%):           0 | Friction (    0%):           0 | Momentum (    0%):           0
+Total CFy:             0 | Pressure (    0%):           0 | Friction (    0%):           0 | Momentum (    0%):           0
+
+
