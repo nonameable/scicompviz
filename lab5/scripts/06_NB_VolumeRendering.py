@@ -17,7 +17,9 @@ magnitudeCalcFilter.Update()
 
 #------------FILTER: RECTILINEAR GRID TO IMAGE DATA-----------
 bounds = magnitudeCalcFilter.GetOutput().GetBounds()
+#print(bounds)
 dimensions = magnitudeCalcFilter.GetOutput().GetDimensions()
+#print(dimensions)
 origin = (bounds[0], bounds[2], bounds[4])
 spacing = ( (bounds[1]-bounds[0])/dimensions[0], 
             (bounds[3]-bounds[2])/dimensions[1],
@@ -41,27 +43,23 @@ imageData2 = probeFilter.GetImageDataOutput()
 # Create transfer mapping scalar value to opacity
 opacityTransferFunction = vtk.vtkPiecewiseFunction()
 opacityTransferFunction.AddPoint(0, 0.2)
-#opacityTransferFunction.AddPoint(14, 0.0)
 
-# --
 opacityTransferFunction.AddPoint(2, 0.7)
 opacityTransferFunction.AddPoint(5, 0.8)
 opacityTransferFunction.AddPoint(10, 0.9)
 
-opacityTransferFunction.AddPoint(13, 1.1)
+opacityTransferFunction.AddPoint(13, 1.3)
 opacityTransferFunction.AddPoint(14, 2.1)
 
 
 
-# --
-
 # Create transfer mapping scalar value to color
 colorTransferFunction = vtk.vtkColorTransferFunction()
 colorTransferFunction.AddRGBPoint(0.0, 0.2, 0.0, 0.0)
-colorTransferFunction.AddRGBPoint(0.5, 1.0, 0.0, 0.0)
-colorTransferFunction.AddRGBPoint(2.0, 0.0, 0.0, 1.1)
-colorTransferFunction.AddRGBPoint(6.0, 0.0, 1.2, 0.0)
-colorTransferFunction.AddRGBPoint(14.0, 0.0, 2.5, 0.0)
+colorTransferFunction.AddRGBPoint(0.5, 1.7, 0.0, 0.0)
+colorTransferFunction.AddRGBPoint(2.0, 0.0, 0.0, 2.1)
+colorTransferFunction.AddRGBPoint(6.0, 0.0, 2.2, 0.0)
+colorTransferFunction.AddRGBPoint(14.0, 0.0, 3.1, 0.0)
 
 # The property describes how the data will look
 volumeProperty = vtk.vtkVolumeProperty()
