@@ -49,7 +49,7 @@ streamline.SetInputConnection(reader.GetOutputPort())
 streamline.SetIntegrationDirectionToForward()
 #streamline.SetIntegrationDirectionToBackward()
 #streamline.SetIntegrationDirectionToBoth()
-streamline.SetMaximumPropagation(1)
+streamline.SetMaximumPropagation(10)
 streamline.SetComputeVorticity(True)
 
 # Visualize stream as ribbons (= Stream ribbons); i.e. we need to pass the streamlines through the ribbon filter
