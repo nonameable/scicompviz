@@ -88,7 +88,7 @@ gOutlineMapper = vtk.vtkPolyDataMapper()
 gOutlineMapper.SetInputConnection(gOutline.GetOutputPort())
 gOutlineActor = vtk.vtkActor()
 gOutlineActor.SetMapper(gOutlineMapper)
-gOutlineActor.GetProperty().SetColor(0.5,0.5,0.5)
+gOutlineActor.GetProperty().SetColor(0.5,1.0,0.5)
 
 # Rendering / Window
 renderer = vtk.vtkRenderer()
